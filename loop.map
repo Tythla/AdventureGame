@@ -15,7 +15,7 @@
         "desc": "A dimly lit cave where the walls seem to whisper ancient secrets.",
         "exits": {
             "south": 0,
-            "deeper": 5
+            "west": 5
         },
         "item": [
             "a silver key"
@@ -46,7 +46,7 @@
         "name": "The Secret Library",
         "desc": "A hidden room filled with ancient books and scrolls. A place of lost knowledge.",
         "exits": {
-            "secret door": 1
+            "south": 1
         },
         "items": [
             "an ancient tome"
@@ -56,7 +56,7 @@
         "name": "The Dark Abyss",
         "desc": "A mysterious void beyond the Whispering Cave, home to unknown creatures and dark secrets.",
         "exits": {
-            "back": 1
+            "north": 1
         },
         "challenge": {
             "creature": "King of the Dark Abyss",
