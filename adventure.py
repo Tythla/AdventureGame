@@ -50,6 +50,8 @@ while True:
     if Player.position==5:
         if 'old scroll' in Player.inventory:
             print('You defeated the boss! Congrat!')
+            exit()
         else:
-            print('The boss killed you. Game over')
+            print('The boss killed you. Game over.')
+            print('Try to get some magical item. A scroll may help?')
             exit()
