@@ -7,8 +7,7 @@
             "east": 2
         },
         "items": [
-            "a glowing leaf",
-            "a silver key"
+            "a glowing leaf"
         ]
     },
     {
@@ -18,10 +17,9 @@
             "south": 0,
             "deeper": 5
         },
-        "hidden_passage": {
-            "trigger_item": "ancient tome",
-            "leads_to": 4
-        }
+        "item": [
+            "a silver key"
+        ]
     },
     {
         "name": "The Crystal Lake",
@@ -31,8 +29,7 @@
             "north": 3
         },
         "items": [
-            "a mysterious crystal",
-            "an old scroll"
+            "a mysterious crystal"
         ]
     },
     {
@@ -41,10 +38,9 @@
         "exits": {
             "south": 2
         },
-        "secret": {
-            "puzzle": "moonlight sonata",
-            "unlocks": "stairway to the top"
-        }
+        "items": [
+            "an old scroll"
+        ]
     },
     {
         "name": "The Secret Library",
@@ -53,8 +49,7 @@
             "secret door": 1
         },
         "items": [
-            "an ancient tome",
-            "a mysterious amulet"
+            "an ancient tome"
         ]
     },
     {
@@ -64,8 +59,7 @@
             "back": 1
         },
         "challenge": {
-            "creature": "Guardian of the Abyss",
-            "treasure": "legendary weapon"
+            "creature": "King of the Dark Abyss",
         }
     }
 ]
