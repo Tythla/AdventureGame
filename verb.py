@@ -108,6 +108,7 @@ verb_descriptions = {
     "get": "Pick up an item.",
     "look": "Check your location and where you can move to.",
     "drop": "Remove an item from your inventory.",
+    "inventory": "Show items in your inventory",
     "quit": "Leave the game."
 }
 
@@ -118,6 +119,7 @@ def help():
 
 
 verb_dict_1 = {
+    "help": help,
     "look": look,
     "l": look,
     "inventory": inventory,
