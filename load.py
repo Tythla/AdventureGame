@@ -9,7 +9,7 @@ filename = sys.argv[1]
 
 try:
     with open(filename, 'r') as file:
-        map = json.load(filename)
+        map = json.load(file)
 except:
     print('file name not valid')
     exit()
