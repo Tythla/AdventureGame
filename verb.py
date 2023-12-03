@@ -69,6 +69,9 @@ def get(item=None):
     else:
         print(f"There is no {item} here to get.")
 
+def g():
+    item_get = input()
+    get(item_get)
 
 def quit():
     print("Thank you for playing. Goodbye!")
@@ -94,6 +97,9 @@ def drop(item=None):
     else:
         print(f"You don't have {item} in your inventory.")
 
+def d():
+    item_drop = input()
+    drop(item_drop)
 
 verb_descriptions = {
     "go": "Move to a location.",
