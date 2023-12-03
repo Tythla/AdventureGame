@@ -2,7 +2,6 @@ from player import Player
 from load import map
 from dsc_print import show
 import sys
-import inspect
 
 directions = {
     "north": "north", "n": "north",
@@ -40,12 +39,10 @@ def parse_command(command):
     action = words[0].lower()
 
     # Handling direction commands (both explicit and implicit)
-    if action == "help":
-        help()
-    elif action in directions or action == "go":
-        direction = directions.get(action) or words[1].lower() if len(words) > 1 else None
-        go(direction)
-        
+    if action in verb_dict:
+        func = verb_dict[action]
+        arg = words[1].lower() if len(words) > 1 else None
+        func(arg)
     else:
         print("I don't understand that command.")
 
@@ -102,6 +99,15 @@ def drop(item=None):
         print(f"You dropped the {item}.")
     else:
         print(f"You don't have {item} in your inventory.")
+
+verb_dict = {
+    "look": look, "l": look,
+    "inventory": inventory, "i": inventory,
+    "get": get, "ge": get,
+    "drop": drop, "d": drop,
+    "quit": quit, "q": quit,
+    **{d: go for d in directions}  # Add all direction commands
+}
 
 verb_descriptions = {
     "go": "Move to a location.",
