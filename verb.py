@@ -40,7 +40,9 @@ def parse_command(command):
     action = words[0].lower()
 
     # Handling direction commands (both explicit and implicit)
-    if action in directions or action == "go":
+    if action == "help":
+        help()
+    elif action in directions or action == "go":
         direction = directions.get(action) or words[1].lower() if len(words) > 1 else None
         go(direction)
         
@@ -111,11 +113,8 @@ verb_descriptions = {
 
 def help():
     print("Available commands:")
-    for name, obj in inspect.getmembers(sys.modules[__name__]):
-        if inspect.isfunction(obj) and name in verb_descriptions:
-            description = verb_descriptions[name]
-            verb_name = name + (" ..." if inspect.signature(obj).parameters else "")
-            print(f" - {verb_name}: {description}")
+    for verb_name, description in verb_descriptions.items():
+        print(f" - {verb_name}: {description}")
 
 
 verb_dict_1 = {
