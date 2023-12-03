@@ -69,10 +69,6 @@ def get(item=None):
     else:
         print(f"There is no {item} here to get.")
 
-def g():
-    item_get = input()
-    get(item_get)
-
 def inventory():
     if len(Player.inventory)==0:
         print('You are not carrying anything')
@@ -104,10 +100,6 @@ def drop(item=None):
         print(f"You dropped the {item}.")
     else:
         print(f"You don't have {item} in your inventory.")
-
-def d():
-    item_drop = input()
-    drop(item_drop)
 
 verb_descriptions = {
     "go": "Move to a location.",
