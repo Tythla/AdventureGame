@@ -14,8 +14,10 @@
         "name": "The Whispering Cave",
         "desc": "A dimly lit cave where the walls seem to whisper ancient secrets.",
         "exits": {
+            "north":3,
             "south": 0,
-            "west": 5
+            "west": 5,
+            "east": 4
         },
         "item": [
             "silver key"
@@ -26,7 +28,7 @@
         "desc": "A serene lake with crystal-clear water, reflecting the world in a surreal manner.",
         "exits": {
             "west": 0,
-            "north": 3
+            "north": 4
         },
         "items": [
             "mysterious crystal"
@@ -36,7 +38,7 @@
         "name": "The Abandoned Tower",
         "desc": "A towering structure, remnants of an ancient civilization. The top seems to be home to a powerful artifact.",
         "exits": {
-            "south": 2
+            "south": 1
         },
         "items": [
             "old scroll"
@@ -46,7 +48,8 @@
         "name": "The Secret Library",
         "desc": "A hidden room filled with ancient books and scrolls. A place of lost knowledge.",
         "exits": {
-            "south": 1
+            "south": 2,
+            "west": 1
         },
         "items": [
             "ancient tome"
@@ -56,7 +59,7 @@
         "name": "The Dark Abyss",
         "desc": "A mysterious void beyond the Whispering Cave, home to unknown creatures and dark secrets.",
         "exits": {
-            "north": 1
+            "east": 1
         },
         "challenge": {
             "creature": "King of the Dark Abyss"
