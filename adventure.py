@@ -14,8 +14,8 @@ except:
     exit()
 show(map[Player.position])
 
-if steps>50:
-    print('You starved amd died')
+if steps>30:
+    print('You starved and died')
     exit()
 
 while True:
@@ -35,18 +35,20 @@ while True:
                 verb_dict_1[command[0]]()
             elif command[0] in verb_dict_2:
                 verb_dict_2[command[0]]()
+                steps += 1
             else:
                 print("Plase enter a right verb.")
         elif len(command) == 2 and command[0] in verb_dict_2:
             if command[0] in verb_dict_2:
-                verb_dict_2[command[0]](command[1]) # this's like go('east')
+                verb_dict_2[command[0]](command[1])
+                steps += 1
             else:
                 print("Plase enter a right verb.")
         else:
             print("Plase enter a right verb.")
 
     if Player.position==5:
-        if 'a old scroll' in Player.inventory:
+        if 'old scroll' in Player.inventory:
             print('You defeated the boss! Congrat!')
         else:
             print('The boss killed you. Game over')
