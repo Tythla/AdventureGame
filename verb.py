@@ -73,6 +73,14 @@ def g():
     item_get = input()
     get(item_get)
 
+def inventory():
+    if len(Player.inventory)==0:
+        print('You are not carrying anything')
+    else:
+        print('Inventory:')
+        for item in Player.inventory:
+            print(item)
+
 def quit():
     print("Thank you for playing. Goodbye!")
     sys.exit(0)
@@ -116,3 +124,20 @@ def help():
             description = verb_descriptions[name]
             verb_name = name + (" ..." if inspect.signature(obj).parameters else "")
             print(f" - {verb_name}: {description}")
+
+
+verb_dict_1 = {
+    "look": look,
+    "l": look,
+    "inventory": inventory,
+    "i": inventory
+}
+
+verb_dict_2 = {
+    "go": go,
+    "g": go,
+    "get": get,
+    "ge": get,
+    "drop": drop,
+    "d": drop
+}
