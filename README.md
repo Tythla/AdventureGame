@@ -1,3 +1,4 @@
+
 ## Adventure Game
 **Group Members:**
 Yangbo Liu(yliu8)
@@ -17,6 +18,7 @@ Abbreviations for verbs, resolved by using dictionaries.
  3. A drop verb
  4. Directions become  verbs
  5. Winning and losing conditions
+ 
  **Winning and losing condition:**
 There are steps limit of 30. Once exceeds, the game will fail.
 Meanwhile, there is a room with boss. Player can only defeat it with certain item carried.
