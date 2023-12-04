@@ -47,6 +47,12 @@ while True:
         else:
             print("Plase enter a right verb.")
 
+    if Player.position == 3:
+        if 'silver key' not in Player.inventory:
+            print('The tower is locked. You need a key.')
+            Player.position = 1
+            continue
+
     if Player.position==5:
         if 'old scroll' in Player.inventory:
             print('You defeated the boss! Congrat!')
